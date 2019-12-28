@@ -2,10 +2,13 @@
 /**
  * Claculation
  */
+
+import java.lang.ArithmeticException;
+
 public class Claculation {
 
     Claculation(byte input, byte input1, byte input2) {
-       float answer = 0;
+        float answer = 0;
         switch (input) {
         case 1:
 
@@ -30,9 +33,20 @@ public class Claculation {
             break;
 
         case 4:
-            answer = input1 / input2;
 
-            System.out.println("Division is : " + answer);
+            try {
+
+                answer = input1 / input2;
+
+                System.out.println("Division is : " + answer);
+
+            } catch (ArithmeticException e) {
+
+
+                System.out.println("  divide by 0   is not  possible ");
+
+
+            }
 
             break;
 
